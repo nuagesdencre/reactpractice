@@ -1,28 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+import faker from 'faker';
 
-// function getButtonText() {
-//     return 'Click on Me!';
-// }
+const App = () => {
+    return (
+        <div className="ui container comments">
+        <div className="comment">
+            <a href="/" className="avatar">
+                <img alt="avatar" src={faker.image.avatar()}/>
+            </a>
+            <div className="content">
+                <a href="/" className="author">
+                </a>
+                <div className="metadata">
+                    <span className="date">Today at 11.00AM</span>
+                </div>
+                <div className="text">Good story bro.</div>
+            </div>
+        </div>
+        </div>
+    )
+};
 
-// Objects are not valid as a React child
-const Blue = ()=> {
-    // const buttonText = "Please Click Here!";
-    // Not allowed to print out unless refering to key
-    const buttonText = {text: "Click Me"};
-    const style = {backgroundColor:'blue', color:'white'};
-    return (<div>
 
-         <label className="label" for="name"> Enter name: </label>
-        <input id="name" type="text" />
-        {/*<button style={{backgroundColor:'blue', color:'white'}}>{getButtonText()}</button>*/}
-        <button style={style}>{buttonText.text}</button>
-    </div>)
-}
 ReactDOM.render(
-    // <App />,
-   <Blue />,
+    <App />,
   document.getElementById('root')
 );
