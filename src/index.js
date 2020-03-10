@@ -7,18 +7,24 @@ class App extends React.Component {
         super(props);
 
         this.state = {lat: null, errMsg: ''};
-
-        window.navigator.geolocation.getCurrentPosition(
-            position => this.setState(
-                {lat: position.coords.latitude}),
-            err => {
-                this.setState({
-                        errMsg: err.message
-                    }
-                )
-            });
-
     }
+
+componentDidMount(){
+   //calls at the time of mounting, only once
+    //all the data-loading code should be here
+    window.navigator.geolocation.getCurrentPosition(
+        position => this.setState({lat: position.coords.latitude}), err => this.setState({errMsg: err.message});
+    console.log('My component rendered to the screen!')
+}
+    componentDidUpdate(){
+   //calls at the time of updating, anytime there is an update of the component
+        //possible to add data-loading code that is repeated (multiple calls to the network, for instance)
+        console.log('My component was just updated -- it rerendered!')
+}
+
+// componentDidUnmount(){
+//         //to remove the component from the screen (cleanup)
+// }
 
     render() {
 
