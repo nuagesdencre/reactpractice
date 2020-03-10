@@ -1,0 +1,16 @@
+div {
+    background-color: aquamarine;
+}
+
+.snowflake {
+    color: white;
+}
+
+.sun {
+    color: orange;
+}
+.season-display {
+    display:flex;
+    align-items:center;
+    height: 100vh;
+}

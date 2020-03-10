@@ -27,11 +27,11 @@ class App extends React.Component {
     render() {
 
         if (this.state.errMsg && !this.state.lat) {
-            return <h3> Error: {this.state.errMsg}</h3>
+            return <div className="ui container"><h3> Error: {this.state.errMsg}</h3></div>
         } else if (!this.state.errMsg && this.state.lat) {
-            return <SeasonDisplay lat={this.state.lat} />
+            return <div className="ui container"> <SeasonDisplay lat={this.state.lat} /></div>
         } else {
-            return <h1> Loading! </h1>
+            return <div className="ui container"><h1> Loading! </h1></div>
         }
 
     }
