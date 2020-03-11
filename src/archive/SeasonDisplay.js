@@ -1,5 +1,5 @@
 import React from 'react';
-import './assets/SeasonDisplay.css'
+import './SeasonDisplay.css'
 const seasonConfig = {
     summer: {
         iconName: 'sun',
