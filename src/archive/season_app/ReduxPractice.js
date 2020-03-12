@@ -65,10 +65,13 @@ const ourDepartments = combineReducers({
     claimsHistory: claimsHistory,
     policies: policies
 })
+
+//state = repository
 const store = createStore(ourDepartments)
 
 const action = createPolicy('Lucy', 20);
 
+//dispatch is the agent
 store.dispatch(action);
 store.dispatch(createPolicy('Emilie', 20));
 store.dispatch(createPolicy('Sam', 40));
