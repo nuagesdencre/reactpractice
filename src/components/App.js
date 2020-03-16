@@ -6,15 +6,16 @@ const API_KEY = process.env.REACT_APP_PICS_API_KEY ;
 
 class App extends React.Component {
 
-    onSearchSubmit(term) {
-        axios.get('https://api.unsplash.com/search/photos', {
+    async onSearchSubmit(term) {
+        const response = await axios.get('https://api.unsplash.com/search/photos', {
             params: {
                 query: term
             },
             headers: {
                 Authorization: API_KEY
             }
-        })
+        });
+        console.log(response.data.results);
     }
 
     render() {
