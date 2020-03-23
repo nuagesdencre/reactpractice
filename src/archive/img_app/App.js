@@ -1,5 +1,5 @@
 import React from 'react';
-import '../api/unsplash';
+import '../../api/unsplash';
 import SearchBar from "./SearchBar";
 import unsplash from "../api/unsplash";
 import ImageList from "./ImageList";
