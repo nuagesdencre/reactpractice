@@ -9,6 +9,10 @@ import reducers from './reducers'
 import App from "./components/App";
 
 const store = createStore(reducers, applyMiddleware(thunk));
+// middleware
+// allowing use of functions for action creators
+// and returning a plain Javascript object ultimately
+
 ReactDOM.render(
     <Provider store={store}>
         <App/>

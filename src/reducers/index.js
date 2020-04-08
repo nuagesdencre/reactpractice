@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
+import postReducer from "./postReducer";
 
 export default combineReducers({
-    //filler until reducers are structured
-    replaceMe:()=>'replace me'
+    posts: postReducer
 });
